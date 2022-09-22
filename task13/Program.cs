@@ -1,7 +1,7 @@
 ﻿// Задача 13: Напишите программу, которая выводит третью цифру 
 // заданного числа или сообщает, что третьей цифры нет.
-//Console.Clear();
-Console.WriteLine(" введите  число");
+Console.Clear();
+Console.Write(" введите  число :");
 int num = Convert.ToInt32(Console.ReadLine());
 int num1 = Math.Abs(num);
 if (num1 < 100 )
