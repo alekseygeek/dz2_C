@@ -115,14 +115,42 @@ Console.Clear();
 //23432 -> да
 
   	
-Console.Write("введите пятизначное число: ");
-int num,r,sum=0,t;
-num = Convert.ToInt32(Console.ReadLine());
-for(t=num;num!=0;num=num/10){
-     r=num % 10;
-     sum=sum*10+r;
-}
-if(t==sum)
-     Console.Write("это число является полиндромом");
-else
-    Console.Write("это число не является полиндромом");
+// Console.Write("введите пятизначное число: ");
+// int num,r,sum=0,t;
+// num = Convert.ToInt32(Console.ReadLine());
+// for(t=num;num!=0;num=num/10){
+//      r=num % 10;
+//      sum=sum*10+r;
+// }
+// if(t==sum)
+//      Console.Write("это число является полиндромом");
+// else
+//     Console.Write("это число не является полиндромом");
+
+// Задача 21
+// Напишите программу, которая принимает на вход координаты двух точек и 
+// находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+Console.Write("введите координату X первой точки: ");
+int x = int.Parse(Console.ReadLine());
+Console.Write("введите координату Y первой точки: ");
+int y = int.Parse(Console.ReadLine());
+Console.Write("введите координату Z первой точки: ");
+int z = int.Parse(Console.ReadLine());
+Console.Write("введите координату X второй точки: ");
+int x1 = int.Parse(Console.ReadLine());
+Console.Write("введите координату Y второй точки: ");
+int y1 = int.Parse(Console.ReadLine());
+Console.Write("введите координату Z второй точки: ");
+int z1 = int.Parse(Console.ReadLine());
+
+int A = x - x1;
+int B = y - y1;
+int C = z - z1;
+
+double length = Math.Sqrt(A * A + B * B + C * C);
+length = Math.Round(length, 2);
+Console.WriteLine($"длинна отрезка {length}");
